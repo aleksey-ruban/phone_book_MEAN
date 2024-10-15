@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <h3 class="mb-4">{{ selectedContact ? 'Редактировать контакт' : 'Создать новый контакт' }}</h3>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="form">
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" [(ngModel)]="contact.name" name="name" class="form-control" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" [(ngModel)]="contact.email" name="email" class="form-control" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="mobile" class="form-label">Мобильный телефон</label>
+            <input type="text" [(ngModel)]="contact.phone.mobile" name="mobile" class="form-control" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="work" class="form-label">Рабочий телефон</label>
+            <input type="text" [(ngModel)]="contact.phone.work" name="work" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">
+            {{ selectedContact ? 'Обновить контакт' : 'Создать контакт' }}
+        </button>
+    </form>
+
+    <h3 class="mb-4">Список контактов</h3>
+    <ul class="list-group">
+        <li *ngFor="let contact of contacts" class="list-group-item d-flex justify-content-between align-items-center border border-2 border-primary rounded mb-2">
+            <div class="p-3"> <!-- Отступ внутри карточки -->
+                <h5 class="mb-1">{{ contact.name }}</h5>
+                <p class="mb-0 text-muted">{{ contact.phone.mobile }}</p>
+                <small class="text-muted">{{ contact.email }}</small>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-warning btn-sm me-2" (click)="editContact(contact)">
+                    <i class="fas fa-edit"></i> <!-- Иконка редактирования -->
+                    Редактировать
+                </button>
+                <button class="btn btn-danger btn-sm" (click)="contact._id ? deleteContact(contact._id) : null">
+                    <i class="fas fa-trash-alt"></i> <!-- Иконка удаления -->
+                    Удалить
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>

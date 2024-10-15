@@ -1,0 +1,86 @@
+.container {
+    max-width: 600px; /* Ограничиваем ширину контейнера */
+    margin: auto; /* Центрируем контейнер */
+    padding: 20px; /* Внутренние отступы */
+    border: 1px solid #dee2e6; /* Граница */
+    border-radius: 5px; /* Скругленные углы */
+    background-color: #f8f9fa; /* Светлый фон */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+h3 {
+    text-align: center; /* Центрируем заголовок */
+    color: #343a40; /* Цвет заголовка */
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Отступы между группами формы */
+}
+
+.form-label {
+    margin-right: 0.5rem; /* Отступ снизу для label */
+}
+
+.btn-primary {
+    width: 100%; /* Кнопка на всю ширину */
+    padding: 10px; /* Внутренние отступы для кнопки */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    transition: transform 0.2s; /* Плавный эффект при наведении */
+}
+
+.list-group-item:hover {
+    transform: scale(1.02); /* Увеличение элемента при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+}
+
+h5 {
+    font-weight: bold; /* Жирный шрифт для имени контакта */
+}
+
+.text-muted {
+    color: #6c757d; /* Цвет для текстов email и мобильного телефона */
+}
+
+.list-group-item:hover {
+    transform: scale(1.02); /* Увеличение элемента при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+}
+
+.btn {
+    display: flex; /* Устанавливает флекс для кнопок */
+    align-items: center; /* Центрирует элементы внутри кнопки */
+    flex-direction: column;
+    padding: 6px 6px;
+    border-radius: 4px;
+    font-weight: 450;
+    color: white;
+}
+
+.btn i {
+    width: 100%;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Цвет кнопки редактирования */
+    color: black;
+    border: none; /* Убирает границу */
+}
+
+.btn-danger {
+    width: 100%;
+    background-color: #dc3545; /* Цвет кнопки удаления */
+    border: none; /* Убирает границу */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
