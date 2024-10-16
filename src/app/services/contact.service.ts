@@ -7,7 +7,7 @@ import { Contact } from '../models/contact.js';
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:5000/api/contacts';
+  private apiUrl = 'https://phone-book-mean.onrender.com/api/contacts';
 
   constructor(private http: HttpClient) {}
 
